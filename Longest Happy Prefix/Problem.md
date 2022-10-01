@@ -1,3 +1,6 @@
+### Longest Happy Prefix  (Hard)
+> String Matching, Z-algorithm
+
 [Link](https://leetcode.com/problems/longest-happy-prefix/)
 
 A string is called a happy prefix if is a non-empty prefix which is also a suffix (excluding itself).
