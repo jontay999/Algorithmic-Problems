@@ -1,40 +1,23 @@
-### Time Based Key-Value Store
-> Ordered Map, Binary Search
+### Add One Row To Tree
+> DFS
 
-[Link](https://leetcode.com/problems/time-based-key-value-store/)
+[Link](https://leetcode.com/problems/add-one-row-to-tree/)
 
+Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth depth.
 
-Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key's value at a certain timestamp.
+Note that the root node is at depth 1.
 
-Implement the TimeMap class:
+The adding rule is:
 
-TimeMap() Initializes the object of the data structure.
-void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.
-String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev <= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns "".
- 
-
-Example 1:
-
-Input
-["TimeMap", "set", "get", "get", "set", "get", "get"]
-[[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]
-Output
-[null, null, "bar", "bar", null, "bar2", "bar2"]
-
-Explanation
-TimeMap timeMap = new TimeMap();
-timeMap.set("foo", "bar", 1);  // store the key "foo" and value "bar" along with timestamp = 1.
-timeMap.get("foo", 1);         // return "bar"
-timeMap.get("foo", 3);         // return "bar", since there is no value corresponding to foo at timestamp 3 and timestamp 2, then the only value is at timestamp 1 is "bar".
-timeMap.set("foo", "bar2", 4); // store the key "foo" and value "bar2" along with timestamp = 4.
-timeMap.get("foo", 4);         // return "bar2"
-timeMap.get("foo", 5);         // return "bar2"
- 
+Given the integer depth, for each not null tree node cur at the depth depth - 1, create two tree nodes with value val as cur's left subtree root and right subtree root.
+cur's original left subtree should be the left subtree of the new left subtree root.
+cur's original right subtree should be the right subtree of the new right subtree root.
+If depth == 1 that means there is no depth depth - 1 at all, then create a tree node with value val as the new root of the whole original tree, and the original tree is the new root's left subtree.
 
 Constraints:
 
-1 <= key.length, value.length <= 100
-key and value consist of lowercase English letters and digits.
-1 <= timestamp <= 10^7
-All the timestamps timestamp of set are strictly increasing.
-At most 2 * 10^5 calls will be made to set and get
+The number of nodes in the tree is in the range [1, 10^4].
+The depth of the tree is in the range [1, 10^4].
+-100 <= Node.val <= 100
+-10^5 <= val <= 10^5
+1 <= depth <= the depth of tree + 1
