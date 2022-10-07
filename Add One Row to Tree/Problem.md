@@ -1,4 +1,4 @@
-### Add One Row To Tree
+### Add One Row To Tree (Medium)
 > DFS
 
 [Link](https://leetcode.com/problems/add-one-row-to-tree/)

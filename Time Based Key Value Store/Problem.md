@@ -1,4 +1,4 @@
-### Time Based Key-Value Store
+### Time Based Key-Value Store (Medium)
 > Ordered Map, Binary Search
 
 [Link](https://leetcode.com/problems/time-based-key-value-store/)
