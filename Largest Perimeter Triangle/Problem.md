@@ -1,4 +1,4 @@
-### Largets Perimeter Triangle (Easy)
+### Largest Perimeter Triangle (Easy)
 > Math
 
 [Link](https://leetcode.com/problems/largest-perimeter-triangle/)
