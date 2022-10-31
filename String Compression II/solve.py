@@ -34,7 +34,7 @@ def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
     
     
 # More optimal O(kn^2)
-
+d
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         
