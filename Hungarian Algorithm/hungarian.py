@@ -84,7 +84,6 @@ def hungarianMatch(matrix, minimize=True):
     return -v[0]
 
 
-arr = [
-    []
-]
+arr = [[15,96],[36,2]]
+hungarianMatch(arr)
 
